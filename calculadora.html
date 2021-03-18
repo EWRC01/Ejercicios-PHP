@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+    <title>Document</title>
+</head>
+<body>
+    <!--Iniico de for de calculadora-->
+
+<div class="container">
+<form action="ejercicio1.php" method="post">
+<label for="numero1" class="form-label">Numero 1</label>
+<input type="number" class="form-control" name="numero1" placeholder="Ingrese un numero">
+<label for="numero2" class="form-label">Numero 2</label>
+<input type="number" class="form-control" name="numero2" placeholder="Ingrese un numero">
+<label for="operaciones">Eliga la operacion a realizar</label>
+<select class="form-select" name="operaciones">
+    <option value="a">Suma</option>
+    <option value="b">Resta</option>
+    <option value="c">Multiplicacion</option>
+    <option value="d">Division</option>
+</select>
+<label for="respuesta" class="form-label">Resultado</label>
+<input type="number" class="form-control" name="respuesta" readonly>
+<hr>
+<div class="d-grip gap-2 d-md-block">
+<button class="btn btn-dark"  type="submit" onclick="presionar(event);">Resultado</button>
+</div>
+</form>
+</div>
+</body>
+<script>
+    function presionar(event){   
+
+    }
+</script>
+</html>
+
