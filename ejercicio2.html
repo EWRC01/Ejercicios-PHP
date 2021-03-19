@@ -8,21 +8,32 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="container">
+    <div class="container container-sm">
+        <div class="card">
+            <div class="card-header">
+            <h1>Formulario de Registro</h1> 
+                   </div>
+            <div class="card-body">
     <form action="ejercicio2.php" method="post">
         <label for="name" class="form-label">Escriba su nombre:</label>
         <input type="text" class="form-control" placeholder="Escriba su nombre completo" name="name">
         <label for="" class="form-label">Escriba su departamento:</label>
         <input type="text" class="form-control" placeholder="Escriba su departamento" name="departamento">
         <div class="form-check form-switch">
-                <input type="checkbox" onclick="habilitarPais()" class="form-input-check" id="state" name="state">
+                <input type="checkbox" onclick="habilitarPais()" class="form-check-input" id="state" name="state">
                 <label class="form-check-label" for="state">Es extranjero?</label>
         </div>
         <label for="pais" class="form-label">Escriba su pais:</label>
-        <input type="text" class="form-control" placeholder="Escriba su pais" id="pais" name="pais" disabled>
+        <input type="text" class="form-control" placeholder="Escriba su pais" id="pais" name="pais" readonly>
         <label for="codgo" class="form-label">Escriba su codigo:</label>
         <input type="text" class="form-control" placeholder="Escriba su codigo" name="codigo">  
+    </div>
+    <div class="card-footer align-self-center">
+        <button type="submit" class="btn btn-dark btn-lg">Registrar</button>
+    </div>
     </form>
+
+</div>
 </div>
     
 </body>
@@ -34,7 +45,11 @@
    let txt = document.getElementById("pais");
     if(estado.checked=true)
     {
-            txt.disabled = false;
+            txt.readOnly = false;
+    }
+    else if (estado.checked=false)
+    {
+        txt.readOnly = true;
     }
  }
 </script>
