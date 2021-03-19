@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+    <form action="ejercicio2.php" method="post">
+        <label for="name" class="form-label">Escriba su nombre:</label>
+        <input type="text" class="form-control" placeholder="Escriba su nombre completo" name="name">
+        <label for="" class="form-label">Escriba su departamento:</label>
+        <input type="text" class="form-control" placeholder="Escriba su departamento" name="departamento">
+        <div class="form-check form-switch">
+                <input type="checkbox" onclick="habilitarPais()" class="form-input-check" id="state" name="state">
+                <label class="form-check-label" for="state">Es extranjero?</label>
+        </div>
+        <label for="pais" class="form-label">Escriba su pais:</label>
+        <input type="text" class="form-control" placeholder="Escriba su pais" id="pais" name="pais" disabled>
+        <label for="codgo" class="form-label">Escriba su codigo:</label>
+        <input type="text" class="form-control" placeholder="Escriba su codigo" name="codigo">  
+    </form>
+</div>
+    
+</body>
+
+<script>
+    //Creamos una funcion que cuando el usuario sea extranjero, se habilite el txt de pais
+ function habilitarPais(){
+   let estado= document.getElementById("state");
+   let txt = document.getElementById("pais");
+    if(estado.checked=true)
+    {
+            txt.disabled = false;
+    }
+ }
+</script>
+</html>
